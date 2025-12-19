@@ -1,73 +1,62 @@
-🌿 Plant Disease Detection System using Deep Learning
-📌 Project Description
+# Plant 🌱 Disease 🐛 Detection 🔎
 
-This project is a Deep Learning–based Plant Disease Detection System that identifies plant leaf diseases from images using a trained Convolutional Neural Network (CNN) model. The application is built with Python, TensorFlow/Keras, OpenCV, and Streamlit, providing an easy-to-use web interface for real-time disease prediction.
+Plant Disease Detection is an innovative machine learning project that harnesses the power of Convolutional Neural Networks (CNN) and deep learning techniques to identify and classify diseases in plants. The primary objective is to offer farmers and agricultural experts a valuable tool for swift plant health diagnosis, facilitating timely intervention and minimizing the risk of crop loss.
 
-Users can upload a plant leaf image, and the system classifies it as healthy or diseased, along with a confidence score and prevention suggestions for detected diseases.
+[**Live Demo**](https://saurabhsinghdhami-plant-disease-detection-main-app-p8d5ks.streamlit.app/)
 
-⚙️ How It Works
+## Project Structure 📂
 
-The user uploads a plant leaf image through the Streamlit web interface.
+The project comprises essential components:
 
-The image is preprocessed using OpenCV (resizing, normalization).
+- `Plant_Disease_Detection.ipynb`: Jupyter Notebook with the code for model training.
+- `main_app.py`: Streamlit web application for plant disease prediction.
+- `plant_disease_model.h5`: Pre-trained model weights.
+- `requirements.txt`: List of necessary Python packages.
 
-A pre-trained CNN model (plant_disease_model.h5) predicts the disease class.
+## Installation 🚀
 
-The system displays:
+To run the project locally, follow these steps:
 
-Plant name
+1. **Clone the repository:**
 
-Disease name (or healthy status)
+```bash
+git clone https://github.com/SAURABHSINGHDHAMI/Plant-Disease-Detection.git
+```
 
-Prediction confidence
+2. Navigate to the project directory:
 
-Disease prevention tips (if applicable)
+```bash
+cd Plant-Disease-Detection
+```
 
-🧠 Technologies Used
+3. **Install the required packages:**
 
-Python
-
-TensorFlow / Keras – Deep Learning model
-
-OpenCV – Image preprocessing
-
-NumPy – Numerical operations
-
-Streamlit – Web application UI
-
-📂 Project Structure
-Disease-Detection-main/
-│
-├── PLANT/
-│   ├── main_app.py                # Streamlit application
-│   ├── plant_disease_model.h5     # Trained CNN model
-│   ├── requirements.txt           # Required dependencies
-│   └── Test Images/               # Sample leaf images
-
-🚀 Features
-
-Upload plant leaf images
-
-Real-time disease prediction
-
-Healthy vs Diseased classification
-
-Confidence percentage display
-
-Disease prevention suggestions
-
-User-friendly web interface
-
-🎯 Use Cases
-
-Smart agriculture systems
-
-Farmer decision-support tools
-
-Academic AI/ML projects
-
-Early plant disease diagnosis
-
-▶️ How to Run the Project
+```bash
 pip install -r requirements.txt
+```
+
+4. **Run the Streamlit web application:**
+
+```bash
 streamlit run main_app.py
+```
+
+## Usage 🌿
+
+Once the application is running, open your web browser and navigate to [http://localhost:8501](http://localhost:8501). Upload an image of a plant leaf, and the system will predict if it is affected by any disease.
+
+## Model Training 🧠
+
+The model was trained using the `Plant_Disease_Detection.ipynb` notebook. It employs a Convolutional Neural Network architecture to classify plant images into different disease categories. The trained model weights are saved in `plant_disease_model.h5`.
+
+## Web Application 🌐
+
+The web application (`main_app.py`) empowers users to interact with the trained model. Upload plant images, and the application provides real-time predictions regarding the health of the plant.
+
+## Requirements 🛠️
+
+- Keras==2.8.0
+- numpy==1.21.4
+- streamlit==1.18.0
+- opencv-python-headless==4.5.3
+- tensorflow==2.7.0
